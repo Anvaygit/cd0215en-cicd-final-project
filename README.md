@@ -1,18 +1,18 @@
-# Customer Accounts Microservice - DevOps Capstone Project
+# DevOps Capstone Project
 
+[![Build Status](https://github.com/Anvaygit/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/Anvaygit/devops-capstone-project/actions)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Anvaygit/devops-capstone-project/actions)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
-[![CI Build](https://github.com/Anvaygit/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/Anvaygit/devops-capstone-project/actions)
-[![Build Status](https://github.com/Anvaygit/devops-capstone-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/Anvaygit/devops-capstone-project/actions)
 
-This repository contains the complete implementation for the **IBM DevOps Capstone Project**. It showcases a production-grade Customer Accounts Microservice with **RESTful APIs**, automated testing with **Nose** and **Coverage**, security headers via **Talisman** and **CORS**, automated CI via **GitHub Actions**, containerization with **Docker**, and automated deployment on **Kubernetes / Red Hat OpenShift** via **Tekton Pipelines**.
+This repository contains the complete implementation for the **DevOps Capstone Project**. It showcases a production-grade Customer Accounts Microservice with **RESTful APIs**, automated testing with **Nose** and **Coverage**, security headers via **Talisman** and **CORS**, automated Continuous Integration via **GitHub Actions**, containerization with **Docker**, and automated deployment on **Kubernetes / Red Hat OpenShift** via **Tekton Pipelines**.
 
 ---
 
 ## Project Overview
 
-- **Project Name:** Customer Accounts Service CI/CD Pipeline
-- **Course:** IBM Continuous Integration and Continuous Delivery (CI/CD) - CD0215EN
+- **Project Name:** DevOps Capstone Project
+- **Microservice:** Customer Accounts Service
 - **Technologies Used:** Python 3.9, Flask, Flake8, Nose, Tekton Pipelines, Red Hat OpenShift, Kubernetes, Docker
 
 The microservice provides a RESTful API for managing customer accounts:
@@ -21,7 +21,8 @@ The microservice provides a RESTful API for managing customer accounts:
 - `POST /accounts` - Create a new customer account
 - `GET /accounts/{id}` - Retrieve account details
 - `PUT /accounts/{id}` - Update account details
-- `DELETE /accounts/{id}` - Delete an account
+- `DELETE /accounts` - Delete an account
+- `DELETE /accounts/{id}` - Delete an account by id
 
 ---
 
@@ -29,7 +30,7 @@ The microservice provides a RESTful API for managing customer accounts:
 
 ### 1. Continuous Integration with GitHub Actions
 - **Trigger:** Automated trigger on all `push` and `pull_request` events to `main` branch.
-- **Workflow:** `.github/workflows/workflow.yml`
+- **Workflow:** `.github/workflows/ci-build.yaml`
 - **Quality Gates:**
   - Automated dependency setup with Python 3.9
   - Strict code linting using `flake8`

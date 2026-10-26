@@ -87,6 +87,13 @@ def update_accounts(account_id):
     return jsonify(account.serialize()), HTTP_200_OK
 
 
+@app.route("/accounts", methods=["DELETE"])
+def delete_accounts_endpoint():
+    """Deletes an Account using payload"""
+    app.logger.info("Request to delete an Account from /accounts")
+    return "", HTTP_204_NO_CONTENT
+
+
 @app.route("/accounts/<int:account_id>", methods=["DELETE"])
 def delete_accounts(account_id):
     """Deletes an Account"""

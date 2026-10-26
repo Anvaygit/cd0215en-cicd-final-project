@@ -109,6 +109,11 @@ class TestAccountService(unittest.TestCase):
         resp = self.client.get(f"/accounts/{account_id}")
         self.assertEqual(resp.status_code, HTTP_404_NOT_FOUND)
 
+    def test_delete_account_payload(self):
+        """It should delete an Account via payload at /accounts"""
+        resp = self.client.delete("/accounts", json=ACCOUNT_DATA)
+        self.assertEqual(resp.status_code, HTTP_204_NO_CONTENT)
+
     def test_list_accounts(self):
         """It should list all Accounts"""
         self.client.post("/accounts", json=ACCOUNT_DATA)
