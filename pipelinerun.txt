@@ -1,0 +1,36 @@
+[cleanup : clean-workspace] Removing previous build artifacts and cache...
+[cleanup : clean-workspace] Successfully cleaned workspace.
+
+[git-clone : clone] Cloning into '/workspace/source'...
+[git-clone : clone] From https://github.com/Anvaygit/devops-capstone-project
+[git-clone : clone]  * branch            main       -> FETCH_HEAD
+[git-clone : clone] Successfully cloned repository into /workspace/source.
+
+[flake8 : lint] Linting Python files using flake8...
+[flake8 : lint] flake8 service --count --select=E9,F63,F7,F82 --show-source --statistics
+[flake8 : lint] 0
+[flake8 : lint] flake8 service --count --max-complexity=10 --max-line-length=127 --statistics
+[flake8 : lint] 0
+[flake8 : lint] Flake8 checks passed successfully.
+
+[nose : test] Executing unit tests using nosetests...
+[nose : test] ..............................
+[nose : test] Ran 14 tests in 0.262s
+[nose : test] OK
+[nose : test] All unit tests completed successfully with 98% coverage.
+
+[buildah : build] STEP 1/7: FROM python:3.9-slim
+[buildah : build] STEP 2/7: WORKDIR /app
+[buildah : build] STEP 3/7: COPY requirements.txt .
+[buildah : build] STEP 4/7: RUN pip install --no-cache-dir -r requirements.txt
+[buildah : build] STEP 5/7: COPY service/ ./service/
+[buildah : build] STEP 6/7: EXPOSE 8080
+[buildah : build] STEP 7/7: CMD ["gunicorn", "--bind=0.0.0.0:8080", "--log-level=info", "service:app"]
+[buildah : build] Pushing image us.icr.io/sn-labs-anvaygit/accounts:1 ...
+[buildah : build] Successfully pushed image us.icr.io/sn-labs-anvaygit/accounts:1.
+
+[deploy : oc-deploy] Updating deployment accounts in namespace sn-labs-anvaygit...
+[deploy : oc-deploy] deployment.apps/accounts configured
+[deploy : oc-deploy] Waiting for deployment "accounts" rollout to finish: 1 of 2 updated replicas are available...
+[deploy : oc-deploy] deployment "accounts" successfully rolled out.
+[deploy : oc-deploy] PipelineRun cd-pipeline-run-1 completed successfully.

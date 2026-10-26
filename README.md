@@ -1,10 +1,11 @@
-# Customer Accounts Microservice - CI/CD Pipeline
+# Customer Accounts Microservice - DevOps Capstone Project
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Python 3.9](https://img.shields.io/badge/Python-3.9-green.svg)](https://shields.io/)
-[![CI Workflow](https://github.com/Anvaygit/cd0215en-cicd-final-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/Anvaygit/cd0215en-cicd-final-project/actions)
+[![CI Build](https://github.com/Anvaygit/devops-capstone-project/actions/workflows/ci-build.yaml/badge.svg)](https://github.com/Anvaygit/devops-capstone-project/actions)
+[![Build Status](https://github.com/Anvaygit/devops-capstone-project/actions/workflows/workflow.yml/badge.svg)](https://github.com/Anvaygit/devops-capstone-project/actions)
 
-This repository contains the complete implementation for the **IBM Continuous Integration and Continuous Delivery (CI/CD)** Final Project. It showcases a production-grade CI/CD pipeline for the **Customer Accounts Microservice** using **GitHub Actions**, **Tekton Tasks & Pipelines**, and deployment onto **Red Hat OpenShift**.
+This repository contains the complete implementation for the **IBM DevOps Capstone Project**. It showcases a production-grade Customer Accounts Microservice with **RESTful APIs**, automated testing with **Nose** and **Coverage**, security headers via **Talisman** and **CORS**, automated CI via **GitHub Actions**, containerization with **Docker**, and automated deployment on **Kubernetes / Red Hat OpenShift** via **Tekton Pipelines**.
 
 ---
 

@@ -1,11 +1,12 @@
 ---
 name: User Story
-about: Template for creating user stories for this microservice
+about: Template for creating a user story
 title: ''
-labels: ''
+labels: 'user story'
 assignees: ''
-
 ---
+
+# User Story Template
 
 **As a** [role]  
 **I need** [functionality]  

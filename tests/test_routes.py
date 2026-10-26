@@ -116,3 +116,22 @@ class TestAccountService(unittest.TestCase):
         self.assertEqual(resp.status_code, HTTP_200_OK)
         data = resp.get_json()
         self.assertEqual(len(data), 1)
+
+    def test_security_headers(self):
+        """It should return security headers"""
+        resp = self.client.get("/", environ_overrides={"wsgi.url_scheme": "https"})
+        self.assertEqual(resp.status_code, HTTP_200_OK)
+        headers = {
+            'X-Frame-Options': 'SAMEORIGIN',
+            'X-Content-Type-Options': 'nosniff',
+            'Content-Security-Policy': 'default-src \'self\'; object-src \'none\'',
+            'Referrer-Policy': 'strict-origin-when-cross-origin'
+        }
+        for key, value in headers.items():
+            self.assertEqual(resp.headers.get(key), value)
+
+    def test_cors_security(self):
+        """It should return a CORS header"""
+        resp = self.client.get("/", environ_overrides={"wsgi.url_scheme": "https"})
+        self.assertEqual(resp.status_code, HTTP_200_OK)
+        self.assertEqual(resp.headers.get('Access-Control-Allow-Origin'), '*')

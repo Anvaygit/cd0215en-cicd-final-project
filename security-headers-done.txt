@@ -1,0 +1,42 @@
+nosetests -v --with-spec --spec-color tests/test_routes.py:TestAccountService.test_security_headers tests/test_routes.py:TestAccountService.test_cors_security
+
+Account Server Tests
+- It should return security headers
+- It should return a CORS header
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.082s
+
+OK
+
+nosetests -v --with-spec --spec-color tests/
+Account Model Tests
+- It should create an Account and assert that it exists
+- It should read an Account
+- It should update an Account
+- It should delete an Account
+
+Account Server Tests
+- It should call the home page
+- It should return health status OK
+- It should create a new Account
+- It should read an Account
+- It should return 404 for an Account not found
+- It should update an existing Account
+- It should delete an Account
+- It should list all Accounts
+- It should return security headers
+- It should return a CORS header
+
+Name                  Stmts   Miss  Cover   Missing
+---------------------------------------------------
+service/__init__.py      16      0   100%
+service/models.py        52      2    96%   78, 92
+service/routes.py        50      0   100%
+service/status.py        10      0   100%
+---------------------------------------------------
+TOTAL                   128      2    98%
+----------------------------------------------------------------------
+Ran 14 tests in 0.262s
+
+OK

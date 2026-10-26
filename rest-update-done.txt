@@ -1,0 +1,14 @@
+curl -i -X PUT -H "Content-Type: application/json" -d '{"name":"Roopali Sen","email":"roopali_sen@example.com","address":"452 Industrial Area, Phase II","phone_number":"9876543210"}' http://localhost:8080/accounts/1
+
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Mon, 26 Oct 2026 07:15:15 GMT
+Content-Type: application/json
+Content-Length: 176
+Access-Control-Allow-Origin: *
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+
+{"address":"452 Industrial Area, Phase II","date_joined":"2026-10-26","email":"roopali_sen@example.com","id":1,"name":"Roopali Sen","phone_number":"9876543210"}

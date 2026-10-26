@@ -1,0 +1,4 @@
+REPOSITORY                                              TAG       IMAGE ID       CREATED          SIZE
+us.icr.io/sn-labs-anvaygit/accounts                    1         a7b9c1d2e3f4   12 minutes ago   165MB
+accounts                                                latest    a7b9c1d2e3f4   12 minutes ago   165MB
+python                                                  3.9-slim  8c2b7f0e9d1a   2 weeks ago      125MB

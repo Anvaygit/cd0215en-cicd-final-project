@@ -1,0 +1,14 @@
+curl -i -X GET http://localhost:8080/accounts/1
+
+HTTP/1.1 200 OK
+Server: gunicorn
+Date: Mon, 26 Oct 2026 07:15:10 GMT
+Content-Type: application/json
+Content-Length: 172
+Access-Control-Allow-Origin: *
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; object-src 'none'
+Referrer-Policy: strict-origin-when-cross-origin
+
+{"address":"452 Industrial Area, Phase II","date_joined":"2026-10-26","email":"roopali@example.com","id":1,"name":"Roopali Sen","phone_number":"9876543210"}
